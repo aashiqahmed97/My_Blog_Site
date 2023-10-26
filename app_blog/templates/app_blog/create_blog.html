@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title_block %}    {% endblock title_block %}
+{% block content %}
+<h2>Write Your Blog Here!</h2>
+<form action="" method="POST" enctype="multipart/form-data">
+    {{form.as_p}}
+    {% csrf_token %}
+    <button type="submit" class="btn btn-success btn-sm">Publish</button>
+</form>
+
+
+{% endblock content %}

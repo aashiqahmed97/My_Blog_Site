@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title_block %} {{ blog.blog_title }}   {% endblock title_block %}
+{% block content %}
+{% if blog.Author == user %}
+<form action="" method="POST">
+    {{form.as_p}}
+    {% csrf_token %}
+    <button type="submit" name="button">Update</button>
+
+{% else %}
+<p>you are not allowed to view this page .404</p>     
+</form>
+{% endif %}
+
+{% endblock content %}

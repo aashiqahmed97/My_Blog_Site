@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title_block %} change pass {% endblock %}
+{% block content %}
+{% if changed %}
+<div  class="alert alert-success"> password change successfully
+
+</div>
+{% endif %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="button" class="btn btn-warning btn-sm"> change </button>
+
+
+
+</form>
+
+{% endblock content %}
